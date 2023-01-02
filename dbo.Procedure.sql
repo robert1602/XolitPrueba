@@ -14,7 +14,7 @@ BEGIN TRY
     DECLARE @estado_inactivo BIT;
     DECLARE @fecha_actual DATETIME;
     DECLARE @registro_insertado_actualizado INT;
-    BEGIN TRANSACTION
+    BEGIN TRANSACTION 
     --
     SET @estado_activo = 1;
     SET @estado_inactivo = 0;
