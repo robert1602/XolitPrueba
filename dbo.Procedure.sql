@@ -16,9 +16,6 @@ BEGIN TRY
     DECLARE @registro_insertado_actualizado INT;
     BEGIN TRANSACTION 
     --
-    SET @estado_activo = 1;
-    SET @estado_inactivo = 0;
-    SET @fecha_actual = GETDATE(); 
 
     IF @input_cliente_id != 0 --UPDATE
     BEGIN
