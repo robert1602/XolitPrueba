@@ -1,4 +1,14 @@
-﻿CREATE PROCEDURE [dbo].[sp_crea_o_actualiza_cliente]
+﻿USE [ClienteDB]
+GO
+
+/****** Objeto: SqlProcedure [dbo].[sp_crea_o_actualiza_cliente] Fecha del script: 2/01/2023 1:32:12 p. m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[sp_crea_o_actualiza_cliente]
 @input_cliente_id INT=0,         
 @tipoDocumentoIdent VARCHAR(100)=NULL, 
 @identificacion INT=0,
