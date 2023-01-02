@@ -7,7 +7,7 @@ namespace Repositorio.Especifico.Interface
     {
         Task<DatosTitularPorId> ObtenerDatosClientePorId(int idTitular);
         Task<DatosTitularPorDocumentoDto> ObtenerDatosTitularPorDocumento(FiltroBusquedaTitularDocumentoDto filtosDatosConsulta);
-        Task<int> CrearCliente(CrearClienteDto datosConsulta);
-        public Task<int> ActualizarClienteDto(ActualizarClienteDto datosActualizacion);
+        Task<CrearClienteDto> CrearCliente(CrearClienteDto datosConsulta);
+        Task<ActualizarClienteDto> ActualizarClienteDto(ActualizarClienteDto datosActualizacion);
     }
 }
