@@ -1,11 +1,6 @@
-using System.Threading.Tasks;
-using Dominio.Aplicacion.Implementacion;
 using Dominio.Dto.Titular;
-using Dominio.Exceptions;
-using Dominio.Dto.Sistema;
 using LogicaDeNegocio.ServicioNegocio.Interface;
-using LogicaDeNegocio.Util.Mensajes.Generico;
-using LogicaDeNegocio.Util.Validaciones;
+using System.Threading.Tasks;
 using UnidadDeTrabajo.Interface;
 
 namespace LogicaDeNegocio.ServicioNegocio.Implementacion
@@ -19,13 +14,13 @@ namespace LogicaDeNegocio.ServicioNegocio.Implementacion
             this._unidadDeTrabajo = unidadDeTrabajo;
         }
 
-        public Task<int> ActualizarClienteDto(ActualizarClienteDto datosActualizacion)
+        public async Task<ActualizarClienteDto> ActualizarClienteDto(ActualizarClienteDto datosActualizacion)
         {
-            ActualizarClienteDto datosTitular = await this._unidadDeTrabajo.RepositorioTitular.CrearCliente(datosConsulta);
+            ActualizarClienteDto datosTitular = await this._unidadDeTrabajo.RepositorioTitular.ActualizarClienteDto(datosActualizacion);
             return datosTitular;
         }
 
-        public async Task<int> CrearCliente(CrearClienteDto datosConsulta)
+        public async Task<CrearClienteDto> CrearCliente(CrearClienteDto datosConsulta)
         {
             CrearClienteDto datosTitularCliente = await this._unidadDeTrabajo.RepositorioTitular.CrearCliente(datosConsulta);
             return datosTitularCliente;
@@ -42,7 +37,5 @@ namespace LogicaDeNegocio.ServicioNegocio.Implementacion
             DatosTitularPorDocumentoDto datosTitular1 = await this._unidadDeTrabajo.RepositorioTitular.ObtenerDatosTitularPorDocumento(datosConsulta);
             return datosTitular1;
         }
-
-      
     }
 }

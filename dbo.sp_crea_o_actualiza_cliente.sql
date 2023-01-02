@@ -22,7 +22,7 @@ BEGIN TRY
 		IF EXISTS    
 		(
 			SELECT c.Id_cliente
-			FROM [Cliente] e WITH (NOLOCK)
+			FROM [Cliente] c WITH (NOLOCK)
 			WHERE [Id_cliente] = @input_cliente_id
 		)
 		BEGIN
@@ -57,7 +57,7 @@ BEGIN TRY
 	IF EXISTS    
 		(
 			SELECT c.Id_cliente
-			FROM [Cliente] e WITH (NOLOCK)
+			FROM [Cliente] c WITH (NOLOCK)
 			WHERE [Id_cliente] = @input_cliente_id
 		)
 		BEGIN
