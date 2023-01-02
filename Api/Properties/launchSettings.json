@@ -1,0 +1,44 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:61980",
+      "sslPort": 44304
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "E6DE2294-F780-43F5-BA3D-2717A98F21B5": "Debugger",
+        "BaseDeDtos": "",
+        "ServidorSmtp": "smtp.mailtrap.io",
+        "PortSmtp": "2525",
+        "UsuarioSmtp": "6a80c463dc0067",
+        "PasswordSmtp": "ed9aa52acf5797",
+        "EmailSmtp": "contacto@troop.com.co"
+      }
+    },
+    "Estructura": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:5006;http://localhost:4903",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "E6DE2294-F780-43F5-BA3D-2717A98F21B5": "Debugger",
+        "BaseDeDtos": "",
+        "ServidorSmtp": "smtp.office365.com",
+        "PortSmtp": "587",
+        "UsuarioSmtp": "Contacto@troop.com.co",
+        "PasswordSmtp": "C0nt4c.4215",
+        "EmailSmtp": "Contacto@troop.com.co"
+      }
+    }
+  }
+}
