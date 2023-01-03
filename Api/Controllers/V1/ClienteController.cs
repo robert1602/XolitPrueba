@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using LogicaDeNegocio.ServicioNegocio.Interface;
 using System.Threading.Tasks;
 using Dominio.Dto.Titular;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Api.Controllers.V1
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class ClienteController : ControllerBase
@@ -17,10 +19,10 @@ namespace Api.Controllers.V1
         }
 
         [HttpGet]
-        [Route("datos-cliente")]
-        public async Task<IActionResult> ObtenerDatosCliente(int idTitular)
+        [Route("obtener-datos-cliente")]
+        public async Task<IActionResult> ObtenerDatosCliente(int idCliente)
         {
-            return Ok(await this._servicioNegocioTitular.ObtenerDatosClientePorId(idTitular));
+            return Ok(await this._servicioNegocioTitular.ObtenerDatosClientePorId(idCliente));
         }
 
         [HttpPost]

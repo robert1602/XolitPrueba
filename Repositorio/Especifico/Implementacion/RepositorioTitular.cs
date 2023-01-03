@@ -30,7 +30,7 @@ namespace Repositorio.Especifico.Interface
         public async Task<DatosTitularPorId> ObtenerDatosClientePorId(int idTitular)
         {
             Dictionary<string, object> parametrosConsulta = ParametroTitular.ConsultaClientPorId(idTitular);
-            string nombreProcedimiento = EnumValor.GetStringValue(ProcedimientosTitular.SpObtenerDatosTitularPorId);
+            string nombreProcedimiento = EnumValor.GetStringValue(ProcedimientosTitular.SpObtenerDatosClientePorId);
             return (await this._repositorioConsultaDatos.EjecutarStoredProcedurePorParametro<DatosTitularPorId>(CommandType.StoredProcedure, nombreProcedimiento, parametrosConsulta))
                     .FirstOrDefault();
         }

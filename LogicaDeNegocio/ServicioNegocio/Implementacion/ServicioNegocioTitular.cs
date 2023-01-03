@@ -27,12 +27,12 @@ namespace LogicaDeNegocio.ServicioNegocio.Implementacion
         }
 
 
-        async Task<DatosTitularPorId> IServicioNegocioTitular.ObtenerDatosClientePorId(int idTitular)
+        public async Task<DatosTitularPorId> ObtenerDatosClientePorId(int idTitular)
         {
             DatosTitularPorId datosTitular = await this._unidadDeTrabajo.RepositorioTitular.ObtenerDatosClientePorId(idTitular);
             return datosTitular;
         }
-        async Task<DatosTitularPorDocumentoDto> IServicioNegocioTitular.ObtenerDatosTitularPorDocumento(FiltroBusquedaTitularDocumentoDto datosConsulta)
+        public async Task<DatosTitularPorDocumentoDto> ObtenerDatosTitularPorDocumento(FiltroBusquedaTitularDocumentoDto datosConsulta)
         {
             DatosTitularPorDocumentoDto datosTitular1 = await this._unidadDeTrabajo.RepositorioTitular.ObtenerDatosTitularPorDocumento(datosConsulta);
             return datosTitular1;

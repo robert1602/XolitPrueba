@@ -6,8 +6,8 @@ namespace Repositorio.Enumerables.ProcedimientosAlmacenados
     {
         public enum ProcedimientosTitular
         {
-            [StringValue("titular_sp_obtener_dato_personal_por_id")]
-            SpObtenerDatosTitularPorId = 1,
+            [StringValue("sp_obtener_datos_cliente_por_id")]
+            SpObtenerDatosClientePorId = 1,
             [StringValue("titular_sp_obtener_titular_por_cedula")]
             SpObtenerDatosTitularPorDocumento = 2,
 
